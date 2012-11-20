@@ -1,5 +1,11 @@
 Menu::Application.routes.draw do
 
+  root :to => "home#index"
+
+  resources :restaurantes
+  
+  get "home/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
