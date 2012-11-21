@@ -1,35 +1,12 @@
-		<%= link_to('Ver restaurantes', restaurantes_path) %>
+﻿<div id="pagina_ppal">
 		
-		<!-- columns -->
-		<div id="cols">
-			
-			<!-- left column -->
-			<div class="col">
-				<h3>Robust and Modular</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
-			</div>
-			<!-- /left column -->
-			
-			<!-- middle column -->
-			<div class="col">
-				<h3>Simple to Use</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
-			</div>
-			<!-- /middle column -->
-			
-			<!-- right column -->
-			<div class="col last">
-				<h3>Interactive and Fun</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
-			</div>
-			<!-- /right column -->
-			
-			<div class="clear"></div>
+		<div id="busqueda_ppal">
+			<%= form_tag(search_restaurantes_path, :method => "get") do %>
+			<%= text_field_tag :q, nil, :placeholder => 'Busca tu restaurante', :size => 50, :class => "btn" %>
+			<% end %>
+		</div> 
+		<div id="busqueda_secundaria">
+			<%= link_to('Ver todos', restaurantes_path) %>		
 		</div>
-		<!-- /columns -->		
 		
-
-
+</div>

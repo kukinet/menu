@@ -1,10 +1,17 @@
 Menu::Application.routes.draw do
 
-  root :to => "home#index"
+	root :to => "home#index"
 
-  resources :restaurantes
-  
-  get "home/index"
+	resources :restaurantes do
+       collection do
+          get 'search'
+       end
+    end
+   
+	get "home/index"
+	get "home/acercade"
+	get "home/contacto"	
+	get "home/nuevorestaurante"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

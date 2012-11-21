@@ -1,4 +1,11 @@
 class RestaurantesController < ApplicationController
+
+   # Búsqueda textual (nombre o descripción)
+   def search 
+     str=params[:q]
+     @restaurantes = Restaurante.where("LOWER (nombre) LIKE ? OR LOWER (descripcion) LIKE ?", "%#{str.downcase}%", "%#{str.downcase}%")
+   end
+
   # GET /restaurantes
   # GET /restaurantes.json
   def index

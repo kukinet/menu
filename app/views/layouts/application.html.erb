@@ -48,10 +48,10 @@
 		<div id="top">
 			<h1 id="logo"><a href="#">Menu <span>del dia</span></a></h1>
 			<ul id="menu">
-				<li><a class="current" href="#">Inicio</a></li>
-				<li><a href="#">Acerca de...</a></li>
-				<li><a href="#">Incluir mi restaurante</a></li>
-				<li><a href="#">Contacto</a></li>
+				<li><%= link_to("Inicio", home_index_path) %></li>
+				<li><%= link_to("Ver restaurantes", restaurantes_path) %></li>
+				<li><%= link_to("Incluir mi restaurante", home_nuevorestaurante_path) %></li>
+				<li><%= link_to("Contacto", home_contacto_path) %></li>
 			</ul>
 		</div>
 		<!-- /top -->

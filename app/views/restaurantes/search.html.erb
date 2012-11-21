@@ -1,4 +1,7 @@
-﻿<div id="site_list">
+﻿<% if @restaurantes.empty? %>
+<h3>Lo sentimos, no se han encontrado resultados.</h3>
+<% else %>
+<div id="site_list">
 <h3>Restaurantes encontrados</h3>
 
   <table> 
@@ -35,3 +38,4 @@
 <%= link_to 'New Restaurante', new_restaurante_path %>
 <br />
 </div>
+<% end %>
