@@ -66,8 +66,9 @@ h2 {
 
 h3 {
 	font-size: 1.4em;
-	color: #424248;
+	color: #53a7ea;
 	margin: 0 0 10px;
+	padding-bottom: 0.5em;
 }
 
 /* top */
@@ -205,6 +206,10 @@ h3 {
 	margin: 0 0 40px; 
 }
 
+#side p strong {
+	color: #3F3E44;
+}
+
 /* side twitter box */
 .boxtop {
 	background: url(boxtop.png) no-repeat; 
@@ -316,3 +321,49 @@ padding-bottom: 5dip;
   margin-top: 1em;
 }
 
+#clear {
+	clear: both;
+}
+
+#ficharestaurante{
+margin: 0 auto;
+}
+
+/* main content (left side) */
+#ficharestaurante .menu { 
+	float: left; 
+	width: 65%; 
+	margin: 0 0 40px; 
+}
+#ficharestaurante .menu p strong {
+	color: #3F3E44;
+}
+
+/* side */
+#ficharestaurante .ficha { 
+	float: right; 
+	width: 30%; 
+	padding-left: 10px;
+	border-left-style: dotted;
+	border-color: #fff;	
+	border-width: 2px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#ficharestaurante .ficha img {
+	border-style: dotted;
+	border-color: #3F3E44;	
+	border-width: 2px;
+}
+
+#ficharestaurante .ficha p strong {
+	color: #3F3E44;
+	font-size: 2em;
+}
+
+#ficharestaurante .ficha p {
+
+
+
+}

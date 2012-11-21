@@ -14,15 +14,15 @@
           <dt><%= link_to restaurante.nombre, restaurante %></dt> 
           <dd><%= truncate(strip_tags(restaurante.descripcion),
                  :length => 40) %></dd>
+		  <dd><%= restaurante.direccion %></dd>		
+          <dd><%= restaurante.telefono %></dd>				 
         </dl> 
       </td>
  
       <td class="list_actions"> 
 
           <%= link_to 'Editar', edit_restaurante_path(restaurante) %><br/>
-          <%= link_to 'Eliminar', restaurante, 
-                      :confirm => '¿Estás seguro?',
-                      :method => :delete %>
+          <%= link_to 'Eliminar', restaurante, :confirm => 'Confirmar', :method => :delete %>
       </td> 
     </tr> 
   <% end %>

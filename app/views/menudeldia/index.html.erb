@@ -1,0 +1,31 @@
+<h1>Listing menudeldia</h1>
+
+<table>
+  <tr>
+    <th>Primeros</th>
+    <th>Segundos</th>
+    <th>Extras</th>
+    <th>Precio</th>
+    <th>Fecha</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @menudeldia.each do |menudeldium| %>
+  <tr>
+    <td><%= menudeldium.primeros %></td>
+    <td><%= menudeldium.segundos %></td>
+    <td><%= menudeldium.extras %></td>
+    <td><%= menudeldium.precio %></td>
+    <td><%= menudeldium.fecha %></td>
+    <td><%= link_to 'Show', menudeldium %></td>
+    <td><%= link_to 'Edit', edit_menudeldium_path(menudeldium) %></td>
+    <td><%= link_to 'Destroy', menudeldium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Menudeldium', new_menudeldium_path %>

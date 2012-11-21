@@ -1,45 +1,39 @@
-<p id="notice"><%= notice %></p>
+﻿<p id="notice"><%= notice %></p>
+<div id="ficharestaurante">
+<div class="menu">
+<h3>Menu del dia</h3>
+<% if (@restaurante.menudeldium.nil?) %>
+<p><strong>No hay datos disponibles</strong></p>
 
-<p>
-  <b>Nombre:</b>
-  <%= @restaurante.nombre %>
-</p>
+<% else %>
 
-<p>
-  <b>Descripcion:</b>
-  <%= @restaurante.descripcion %>
-</p>
+<%= render :file => '/menudeldia/_menu', :collection => @restaurante.menudeldium %>
 
-<p>
-  <b>Foto:</b>
-  <%= @restaurante.foto %>
-</p>
+<% end %>
+</div>
 
-<p>
-  <b>Web:</b>
-  <%= @restaurante.web %>
-</p>
+<div class="ficha">
+<h3>Ficha del restaurante (<%= link_to 'Editar', edit_restaurante_path(@restaurante) %>)</h3>
+<%= image_tag(@restaurante.foto, :class => 'list_image') if @restaurante.foto? %>
+<p><strong>
+<% if(@restaurante.web?) %>
+<%= link_to(@restaurante.nombre, @restaurante.web) %>
+<% else %>
+<%= @restaurante.nombre %>
+<% end %>
+</strong></p>
+<p><%= @restaurante.descripcion %></p>
 
-<p>
-  <b>Telefono:</b>
-  <%= @restaurante.telefono %>
-</p>
+<% if(@restaurante.direccion?) %>
+<p><b>Dirección:</b> <%= @restaurante.direccion %></p>
+<% end %>
 
-<p>
-  <b>Direccion:</b>
-  <%= @restaurante.direccion %>
-</p>
+<% if(@restaurante.telefono?) %>
+<p><b>Teléfono:</b> <%= @restaurante.telefono %></p>
+<% end %>
 
-<p>
-  <b>Latitud:</b>
-  <%= @restaurante.latitud %>
-</p>
-
-<p>
-  <b>Longitud:</b>
-  <%= @restaurante.longitud %>
-</p>
+</div>
 
 
-<%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |
-<%= link_to 'Back', restaurantes_path %>
+
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  primeros: MyText
+  segundos: MyText
+  extras: MyString
+  precio: 1.5
+  fecha: 2012-11-21
+
+two:
+  primeros: MyText
+  segundos: MyText
+  extras: MyString
+  precio: 1.5
+  fecha: 2012-11-21

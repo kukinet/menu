@@ -1,5 +1,7 @@
 Menu::Application.routes.draw do
 
+  resources :menudeldia
+  
 	root :to => "home#index"
 
 	resources :restaurantes do

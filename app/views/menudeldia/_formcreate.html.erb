@@ -1,0 +1,27 @@
+<%= form_for([@restaurante, @restaurante.menudeldium.build]) do |f| %>
+
+  <div class="field">
+    <%= f.text_area :primeros %>
+  </div>
+  <div class="field">
+    <%= f.text_area :segundos %>
+  </div>  
+  <div class="field">
+    <%= f.text_field :extras %>
+  </div>  
+  <div class="field">
+    <%= f.text_field :precio %>
+  </div>  
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :restaurante_id %><br />
+    <%= f.text_field :restaurante_id %>
+  </div>  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

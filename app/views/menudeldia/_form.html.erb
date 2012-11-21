@@ -1,0 +1,41 @@
+<%= form_for(@menudeldium) do |f| %>
+  <% if @menudeldium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@menudeldium.errors.count, "error") %> prohibited this menudeldium from being saved:</h2>
+
+      <ul>
+      <% @menudeldium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :primeros %><br />
+    <%= f.text_area :primeros %>
+  </div>
+  <div class="field">
+    <%= f.label :segundos %><br />
+    <%= f.text_area :segundos %>
+  </div>
+  <div class="field">
+    <%= f.label :extras %><br />
+    <%= f.text_field :extras %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br />
+    <%= f.text_field :precio %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :restaurante_id %><br />
+    <%= f.text_field :restaurante_id %>
+  </div>  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
